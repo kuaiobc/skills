@@ -1,0 +1,15 @@
+
+issue:
+  id: string
+  type: factual|task|logic|audience|language|behavior|drift|anti_ai|style
+  severity: critical|high|medium|low
+  location: string
+  evidence: string
+  expected: string
+  actual: string
+  suggested_action: string
+  priority: integer_0_to_100
+  source_behavior: string|null
+  regression_risk: low|medium|high
+
+priority_rule: "Use as a tie-breaker within severity, based on task impact, scope, and fix confidence. Severity always ranks first."

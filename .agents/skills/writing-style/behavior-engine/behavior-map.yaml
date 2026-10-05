@@ -1,0 +1,25 @@
+bands:
+  minimal: [0, 19]
+  light: [20, 39]
+  moderate: [40, 59]
+  strong: [60, 79]
+  dominant: [80, 100]
+behaviors:
+  - {id: lead_with_conclusion, dimension: structure, class: structural, min: 60, instruction: "State the useful conclusion before supporting detail."}
+  - {id: progressive_disclosure, dimension: structure, class: structural, min: 40, instruction: "Reveal detail in layers: conclusion, mechanism, evidence, edge cases."}
+  - {id: one_question_per_section, dimension: structure, class: structural, min: 60, instruction: "Give each major section one dominant reader question."}
+  - {id: maintain_calibrated_tone, dimension: tone, class: linguistic, min: 40, instruction: "Keep the emotional register consistent while allowing emphasis where the evidence warrants it."}
+  - {id: restrained_language, dimension: calmness, class: linguistic, min: 40, instruction: "Use measured language and avoid manufactured excitement or exaggerated certainty."}
+  - {id: state_judgment_early, dimension: directness, class: rhetorical, min: 40, instruction: "State important judgments plainly and early, then support them with reasons."}
+  - {id: use_evidence_grounded_sequence, dimension: narrative, class: structural, min: 20, instruction: "Use a concrete sequence of events or decisions when it clarifies change over time."}
+  - {id: challenge_key_assumptions, dimension: skepticism, class: rhetorical, min: 20, instruction: "Test important assumptions selectively."}
+  - {id: expose_tradeoffs, dimension: skepticism, class: rhetorical, min: 20, instruction: "Name meaningful costs and boundary conditions."}
+  - {id: use_counterexample, dimension: skepticism, class: rhetorical, min: 40, instruction: "Use counterexamples when they materially test the claim."}
+  - {id: explain_authorial_choice, dimension: humanity, class: human, min: 40, instruction: "Explain important choices when alternatives exist."}
+  - {id: state_real_uncertainty, dimension: humanity, class: human, min: 60, instruction: "State genuine uncertainty when evidence or context limits confidence."}
+  - {id: concrete_verbs, dimension: precision, class: linguistic, min: 40, instruction: "Prefer concrete verbs and exact nouns over inflated abstractions."}
+  - {id: preserve_domain_terms, dimension: precision, class: linguistic, min: 60, instruction: "Use established domain terminology consistently."}
+  - {id: control_information_density, dimension: density, class: presentation, min: 40, instruction: "Match information density to audience expertise and attention."}
+  - {id: selective_metaphor, dimension: literary, class: presentation, min: 40, instruction: "Use metaphor only when it improves understanding or emphasis."}
+  - {id: restrained_humor, dimension: humor, class: rhetorical, min: 20, instruction: "Use occasional dry humor only when it does not weaken the point."}
+  - {id: clear_recommendation, dimension: persuasion, class: rhetorical, min: 40, instruction: "Connect recommendations to evidence and constraints."}

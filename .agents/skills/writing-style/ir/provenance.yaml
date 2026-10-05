@@ -1,0 +1,10 @@
+source_types: [defaults, profile, preset, language, audience, context, user]
+field_record:
+  source_id: string
+  path: string
+  value: any
+  authority: integer
+  strength: [soft, strong, hard]
+  overridden: boolean
+  overridden_by: string|null
+rule: retain_for_every_effective_field_and_compiled_behavior

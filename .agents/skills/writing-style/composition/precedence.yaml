@@ -1,0 +1,28 @@
+authority:
+  user: 100
+  context: 80
+  audience: 60
+  language: 50
+  preset: 40
+  profile: 30
+  defaults: 10
+  inferred_language: 10
+strength:
+  hard: 100
+  strong: 50
+  soft: 10
+defaults_by_source:
+  user_task_or_output_requirement: hard
+  user_language_requirement: hard
+  user_explicit_style_preference: strong
+  context: strong
+  audience: strong
+  language: strong
+  profile_constraints: strong
+  preset_preferences: soft
+  defaults: soft
+rules:
+  - "Hard task constraints outrank style preferences."
+  - "Explicit user requirements outrank preset and profile defaults."
+  - "Audience constrains explanation depth; language constrains linguistic realization."
+  - "Do not average explicit conflicting values or silently discard constraints."

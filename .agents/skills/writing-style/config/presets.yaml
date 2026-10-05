@@ -1,52 +1,7 @@
 presets:
-  balanced:
-    structure: 65
-    tone: 55
-    skepticism: 20
-    humanity: 65
-    literary: 15
-    humor: 5
-    precision: 85
-    density: 65
-    persuasion: 25
-    calmness: 75
-    directness: 65
-    narrative: 25
-  technical-thinker:
-    structure: 70
-    tone: 10
-    skepticism: 20
-    humanity: 75
-    literary: 10
-    humor: 5
-    precision: 90
-    density: 75
-    persuasion: 30
-    calmness: 85
-    directness: 80
-    narrative: 20
-  calm-essay:
-    structure: 40
-    tone: 35
-    skepticism: 20
-    humanity: 80
-    literary: 45
-    humor: 10
-    precision: 70
-    density: 45
-    persuasion: 15
-    calmness: 90
-    directness: 45
-    narrative: 55
-  sharp-critic:
-    structure: 65
-    tone: 15
-    skepticism: 80
-    humanity: 70
-    literary: 10
-    humor: 20
-    precision: 90
-    density: 80
-    persuasion: 50
-    calmness: 65
-    directness: 90
+  balanced: {structure: 65, tone: 55, skepticism: 20, humanity: 65, literary: 15, humor: 5, precision: 85, density: 65, persuasion: 25, calmness: 75, directness: 65, narrative: 25}
+  technical-thinker: {structure: 70, tone: 10, skepticism: 20, humanity: 75, literary: 10, humor: 5, precision: 90, density: 75, persuasion: 30, calmness: 85, directness: 80, narrative: 20}
+  clear-technical: {structure: 80, tone: 20, skepticism: 15, humanity: 60, literary: 5, humor: 0, precision: 95, density: 70, persuasion: 35, calmness: 85, directness: 85, narrative: 10}
+  calm-essay: {structure: 40, tone: 35, skepticism: 20, humanity: 80, literary: 45, humor: 10, precision: 70, density: 45, persuasion: 15, calmness: 90, directness: 45, narrative: 55}
+  skeptical: {structure: 70, tone: 20, skepticism: 65, humanity: 70, literary: 10, humor: 10, precision: 90, density: 70, persuasion: 40, calmness: 65, directness: 90, narrative: 10}
+  sharp-critic: {structure: 65, tone: 15, skepticism: 80, humanity: 70, literary: 10, humor: 20, precision: 90, density: 80, persuasion: 50, calmness: 65, directness: 90, narrative: 10}

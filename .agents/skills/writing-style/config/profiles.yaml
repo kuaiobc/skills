@@ -1,0 +1,13 @@
+profiles:
+  plain:
+    file: ../profiles/plain.yaml
+  technical:
+    file: ../profiles/technical.yaml
+  blog:
+    file: ../profiles/blog.yaml
+  essay:
+    file: ../profiles/essay.yaml
+  business:
+    file: ../profiles/business.yaml
+  report:
+    file: ../profiles/report.yaml

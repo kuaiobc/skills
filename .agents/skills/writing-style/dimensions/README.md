@@ -1,40 +1,32 @@
 # Style Dimensions
 
-Dimensions are behavioral controls. A high score means the tendency should be visible more often and more strongly; it does not mean every sentence must exhibit it.
+Weights express relative intensity from 0 to 100. They do not specify the
+number or frequency of sentences. Compile each weight into task-relevant
+behaviors, then validate whether those behaviors were useful and appropriately
+restrained.
 
-## Structure
-High: explicit hierarchy, strong progression, conclusion-first when appropriate.
-Low: looser, associative movement.
+## Dimension definitions
 
-## Tone
-High: more emotionally or socially expressive. Low: restrained and neutral. Use with `calmness` to avoid ambiguity.
+| Dimension | Meaning | High | Low | Avoid |
+| --- | --- | --- | --- | --- |
+| structure | Information hierarchy | Clear progression and signposting | Loose, exploratory order | Formulaic headings or repeated templates |
+| tone | Emotional register | Strongly consistent register | Neutral or varied register | Confusing calm with coldness or force with hostility |
+| skepticism | Testing claims and assumptions | Explicitly tests important premises | Accepts ordinary premises unless material | Cynicism, manufactured objections, constant questioning |
+| humanity | Specific judgment and real uncertainty | Explains consequential choices and limits | Restrained authorial presence | Fake experience or forced intimacy |
+| literary | Rhythm and imagery | Deliberate rhythm and useful imagery | Plain, functional prose | Decorative metaphor that obscures meaning |
+| humor | Intentional comic contrast | Noticeable but controlled humor | Straight presentation | Joke density, sarcasm, distraction |
+| precision | Exact claims and terms | Carefully bounded claims and terminology | Broad but still accurate language | Pedantry and unnecessary qualification |
+| density | Information per unit of text | Compressed for expert readers | More explanation and context | Unreadability or deleting needed reasoning |
+| persuasion | Evidence-based influence | Clear recommendation tied to evidence | Exposition without advocacy | Sales language or false certainty |
+| calmness | Emotional restraint | Even, uninflated language | More emotional emphasis | Flattening genuine urgency or stakes |
+| directness | Explicitness of claims | State the judgment early and plainly | More exploratory or indirect phrasing | Abruptness or unsupported certainty |
+| narrative | Event and change over time | Use people, process, and consequence to carry the idea | Expository, non-sequential presentation | Invented scenes or narrative detail without evidence |
 
-## Skepticism
-High: challenge assumptions, surface counterexamples, discuss costs and failure conditions.
+## Compilation checks
 
-## Humanity
-High: concrete judgment, natural rhythm, specificity, honest uncertainty. Never fabricate experiences.
-
-## Literary
-High: imagery, cadence, metaphor, narrative texture. Never let decoration obscure meaning.
-
-## Humor
-Use selectively. Humor should reveal perspective or release tension, not become a verbal tic.
-
-## Precision
-High: exact nouns, defined terms, qualified claims, explicit evidence boundaries.
-
-## Density
-Controls how much useful information appears per paragraph. High density does not mean longer sentences.
-
-## Persuasion
-Controls how strongly the document pushes a recommendation or action.
-
-## Calmness
-High: restrained emotional vocabulary, no manufactured excitement, no exaggerated certainty.
-
-## Directness
-High: state judgments early and plainly.
-
-## Narrative
-High: use events, people, scenes, process, and change over time.
+- Meaning: identify the decision-relevant effect of the dimension.
+- High/low: adjust emphasis, not correctness or task requirements.
+- Expression: choose observable behaviors from the behavior map.
+- Restraint: check for the listed drift patterns.
+- Interactions: apply `behavior-engine/interactions.yaml` before drafting.
+- Validation: assess presence, usefulness, consistency, and over-application.

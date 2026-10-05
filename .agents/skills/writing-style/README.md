@@ -1,23 +1,39 @@
-# writing-style v1.0
+# Writing Style
 
-A reusable writing-style engine for multiple document types.
+A complete writing workflow for resolving language, audience, document type,
+and style preferences into observable writing behaviors, then evaluating and
+refining the result.
 
-## Basic usage
+## Basic Usage
 
-Choose a Profile and a Preset:
+Choose a profile and preset, or give numeric style weights:
 
-`profile=technical preset=technical-thinker`
+```text
+profile=technical preset=technical-thinker
+structure=70 tone=10 skepticism=20
+```
 
-Or use a numeric recipe:
+Profiles are in `profiles/`; presets are in `config/presets.yaml` and
+`presets/`. Numeric weights describe tendencies, not sentence ratios.
 
-`structure=70 tone=10 skepticism=20`
+## Capabilities
 
-The numbers are stylistic weights, not literal sentence ratios.
+- Language profiles for zh-CN, zh-TW, en-US, and en-GB
+- Audience profiles for executive, engineer, product, general, and academic
+- Six document profiles, style presets, and twelve interpretable dimensions
+- Behavior compilation, composition, provenance, and conflict resolution
+- Anti-AI guidance for translationese, Chinglish, and generic prose
+- Multidimensional evaluation, behavior coverage, and drift detection
+- Bounded targeted rewriting with regression protection
+- Legacy calmness, directness, and narrative dimensions remain supported
+- High-level handling of author-style requests without phrase imitation
 
-## First preset
+The main workflow is:
 
-`presets/70-10-20.yaml` is the initial technical-thinker recipe: strong structure, restrained/plain tone, and deliberate skepticism. It is intentionally expressed as behavioral dimensions rather than author imitation.
+```text
+Request -> Analyze -> Select profile/preset -> Resolve context
+        -> Compose writing model -> Outline -> Draft -> Refine/Critique
+        -> Evaluate -> Targeted rewrite -> Regression check -> Final
+```
 
-## Design principle
-
-Separate **what to write** from **how to write it**. Domain skills supply content and document-specific methodology; this skill supplies style and editorial quality control.
+See `examples/` for composition and evaluation examples.

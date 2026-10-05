@@ -1,0 +1,27 @@
+
+regression:
+
+  protected_dimensions:
+    - task_score
+    - factual_score
+    - logic_score
+    - audience_fit
+    - language_fit
+  preserve_already_passing_behaviors: true
+  protected_conditions:
+    - hard_task_constraints
+    - profile_constraints_not_explicitly_overridden
+
+  tolerance:
+    default: 1
+
+  reject_if:
+    - critical_issue_introduced
+    - protected_score_drop_above_tolerance
+    - new_high_severity_drift
+    - user_explicit_requirement_violated
+    - hard_or_active_profile_constraint_violated
+
+  accept_if:
+    - target_issue_resolved
+    - no_protected_regression

@@ -1,0 +1,46 @@
+
+request:
+  input: "写一篇技术博客，中文，面向高级后端工程师。"
+  explicit:
+    language: {language: zh, locale: zh-CN}
+    audience: {role: engineer, expertise: advanced, context: technical}
+    dimensions: {structure: 70, tone: 10, skepticism: 20}
+  sources:
+    profile: technical
+    preset: technical-thinker
+
+effective_style_ir:
+  profile: {id: technical, authority: profile}
+  preset: {id: technical-thinker, authority: preset}
+  language: {language: zh, locale: zh-CN, authority: user, strength: hard}
+  audience: {role: engineer, expertise: advanced, authority: user, strength: strong}
+  dimensions:
+    structure: {value: 70, authority: user}
+    tone: {value: 10, authority: user}
+    skepticism: {value: 20, authority: user}
+    precision: {value: 90, authority: preset}
+    density: {value: 75, authority: preset}
+  anti_ai: {level: high, authority: defaults}
+  provenance: retained
+
+compiled_behavior_ir:
+  behaviors:
+    - {id: lead_with_conclusion, intensity: 70, status: active}
+    - {id: progressive_disclosure, intensity: 70, status: active}
+    - {id: challenge_key_assumptions, intensity: 20, status: active}
+    - {id: expose_tradeoffs, intensity: 20, status: active}
+    - {id: preserve_domain_terms, intensity: 90, status: active}
+    - {id: control_information_density, intensity: 75, status: active}
+  constraints:
+    - "先给出结论，再解释机制、证据和边界。"
+    - "只在影响判断的地方检验关键假设，不制造反对意见。"
+    - "面向高级工程师解释机制与运维代价，保留领域常用术语。"
+    - "使用自然简体中文，避免翻译腔和官样表达。"
+
+expected_flow:
+  - compose_and_freeze_ir
+  - draft
+  - evaluate_against_behavior_ir_and_language_audience
+  - rewrite_only_ranked_issues_within_budget
+  - reject_protected_regressions
+  - accept_only_when_all_gates_pass

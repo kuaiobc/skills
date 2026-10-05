@@ -1,0 +1,37 @@
+
+rewrite_policy:
+
+  selection:
+    max_issues_per_round: 5
+    prioritize:
+      - critical
+      - high
+      - medium
+      - low
+
+  scope:
+    default: smallest_useful_scope
+    options:
+      - sentence
+      - paragraph
+      - section
+      - document
+
+  protected:
+    - task_score
+    - factual_score
+    - logic_score
+    - audience_fit
+    - language_fit
+    - hard_task_constraints
+    - profile_constraints_not_explicitly_overridden
+
+  acceptance:
+    require_improvement: true
+    regression_tolerance: 1
+
+  stop:
+    max_iterations: 3
+    max_rewrite_rounds_per_iteration: 2
+    minimum_improvement: 2
+    require_all_acceptance_gates: true

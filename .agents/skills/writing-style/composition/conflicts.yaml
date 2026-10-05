@@ -1,0 +1,23 @@
+classes:
+  direct: "Requirements cannot both be satisfied as written."
+  semantic_tension: "Both preferences can coexist with an interaction rule."
+  context: "Audience, language, task, or resource limits require adaptation."
+resolution_order:
+  - hard_constraint
+  - explicit_user_intent
+  - task_criticality
+  - audience_need
+  - language_correctness
+  - authority
+  - style_preference
+strength_defaults:
+  explicit_task_or_output_requirement: hard
+  explicit_language_requirement: hard
+  explicit_style_preference: strong
+  profile_constraint: strong
+  preset_preference: soft
+special_cases:
+  explicit_language_vs_hard_platform_language:
+    action: surface_conflict_and_ask_user
+    silent_override: forbidden
+unresolved_action: surface_when_user_intent_or_correctness_would_materially_change

@@ -1,0 +1,31 @@
+
+coverage:
+  priority_assignment: "Use the compiled Behavior IR priority; never infer priority from dimension intensity alone."
+  states:
+    absent: 0
+    weak: 35
+    adequate: 70
+    strong: 90
+    excessive: 15
+
+  rules:
+    high_priority:
+      absent: high_issue
+      weak: medium_issue
+
+    medium_priority:
+      absent: medium_issue
+      weak: low_issue
+
+    low_priority:
+      absent: acceptable
+
+  measurement:
+    - observability
+    - consistency
+    - usefulness
+    - overapplication
+
+  aggregation:
+    behavior_priority_weighted_mean: true
+    excessive_is_coverage_failure: true

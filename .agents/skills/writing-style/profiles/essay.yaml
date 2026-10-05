@@ -1,8 +1,8 @@
 name: essay
 purpose: Explore an idea through observation, reasoning, and voice.
 constraints:
-  humanity: minimum 65
-  narrative: minimum 30
+  humanity: {min: 65}
+  narrative: {min: 30}
 preferred_patterns:
   - concrete_opening
   - observation_to_question

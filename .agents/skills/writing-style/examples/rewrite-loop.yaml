@@ -1,0 +1,37 @@
+
+baseline:
+  overall: 82
+  issues:
+    - id: issue-001
+      severity: high
+      type: behavior
+      action: "Add operational trade-off."
+
+rewrite_round_1:
+  scope: paragraph
+  target: issue-001
+
+candidate:
+  overall: 87
+  protected_dimensions:
+    factual_score:
+      before: 95
+      after: 95
+    logic_score:
+      before: 88
+      after: 89
+    audience_fit:
+      before: 92
+      after: 92
+    language_fit:
+      before: 90
+      after: 90
+
+decision: ACCEPT
+
+rewrite_round_2:
+  candidate_overall: 88
+  improvement: 1
+  minimum_improvement: 2
+  decision: STOP
+  reason: "Further rewrite is unlikely to provide meaningful value."

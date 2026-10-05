@@ -1,9 +1,9 @@
 name: report
 purpose: Present findings, evidence, decisions, and implications.
 constraints:
-  precision: minimum 90
-  structure: minimum 75
-  literary: maximum 20
+  precision: {min: 90}
+  structure: {min: 75}
+  literary: {max: 20}
 preferred_patterns:
   - executive_summary
   - evidence

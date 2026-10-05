@@ -1,0 +1,83 @@
+
+drift_patterns:
+
+  skepticism:
+    intended: "test assumptions and expose meaningful limits"
+    drift:
+      - cynicism
+      - constant_questioning
+      - manufactured_objections
+
+  structure:
+    intended: "clarify information hierarchy"
+    drift:
+      - mechanical_sections
+      - repetitive_templates
+      - excessive_headings
+
+  tone:
+    intended: "consistent register suited to the audience and purpose"
+    drift:
+      - coldness
+      - hostility
+      - emotional_flatness
+
+  humanity:
+    intended: "specific authorial judgment"
+    drift:
+      - fake_personal_experience
+      - artificial_intimacy
+      - colloquial_tics
+
+  literary:
+    intended: "useful imagery and rhythm"
+    drift:
+      - decorative_metaphor
+      - ornamental_language
+      - clarity_loss
+
+  precision:
+    intended: "exact claims and terminology"
+    drift:
+      - pedantry
+      - unnecessary_qualification
+      - terminology_overload
+
+  density:
+    intended: "appropriate information compression"
+    drift:
+      - unreadability
+      - compressed_explanation
+      - excessive_background
+
+  persuasion:
+    intended: "clear evidence-based recommendation"
+    drift:
+      - sales_language
+      - one_sided_evidence
+      - false_certainty
+
+  humor:
+    intended: "light contrast"
+    drift:
+      - joke_density
+      - distraction
+      - sarcasm
+
+  calmness:
+    intended: "restrained language without flattening meaningful stakes"
+    drift:
+      - emotional_flatness
+      - false_neutrality
+
+  directness:
+    intended: "plain claims supported by reasons"
+    drift:
+      - abruptness
+      - unsupported_certainty
+
+  narrative:
+    intended: "evidence-grounded sequence that clarifies change"
+    drift:
+      - fabricated_scene
+      - narrative_detail_without_purpose

@@ -1,0 +1,12 @@
+interactions:
+  structure_x_skepticism: {rule: "Put challenges at decision points and preserve a clear argument hierarchy."}
+  tone_x_humanity: {rule: "Calm tone with humanity means specific judgment, not fake intimacy.", suppress: [fake_personal_story, exaggerated_emotion]}
+  literary_x_precision: {rule: "Precision wins; imagery remains only when it improves comprehension.", priority: precision}
+  density_x_audience: {rule: "Expertise permits higher density, but mechanisms and decision-relevant caveats remain visible."}
+  persuasion_x_skepticism: {rule: "Make a clear case while acknowledging meaningful objections; never manufacture objections."}
+  tone_x_skepticism: {rule: "Skepticism must not become sarcasm or contempt.", suppress: [mockery, dismissive_language]}
+  tone_x_calmness: {rule: "Tone controls social register; calmness controls emotional intensity. High calmness restrains hype without making the text cold."}
+  tone_x_directness: {rule: "Directness states the judgment plainly; tone keeps it appropriate to the reader. Direct does not mean abrupt."}
+  narrative_x_structure: {rule: "Narrative sequence should clarify change while preserving the document's information hierarchy."}
+  narrative_x_humanity: {rule: "Use only source-grounded events and judgments; never invent personal experience or scenes."}
+  narrative_x_precision: {rule: "Keep chronology and causal claims exact; omit narrative detail that cannot be supported."}

@@ -1,19 +1,19 @@
-version: 1.0
+language:
+  language: [auto, zh, en]
+  locale: [auto, zh-CN, zh-TW, en-US, en-GB]
+  selection: [explicit, profile, inferred]
+audience:
+  role: [auto, executive, engineer, product, general, academic]
+  expertise: [auto, beginner, intermediate, advanced, expert]
+  context: string
+  familiarity: [auto, low, medium, high]
 dimensions:
-  structure: {range: [0, 100], description: "组织、层级、推进与信息架构"}
-  tone: {range: [0, 100], description: "语气稳定度、亲和度与情绪强度"}
-  skepticism: {range: [0, 100], description: "质疑默认假设、边界与反例"}
-  humanity: {range: [0, 100], description: "真人判断、具体感、自然节奏"}
-  literary: {range: [0, 100], description: "意象、节奏、语言审美与叙事感"}
-  humor: {range: [0, 100], description: "幽默、反讽、轻松程度"}
-  precision: {range: [0, 100], description: "事实、概念和措辞的精确程度"}
-  density: {range: [0, 100], description: "单位篇幅的信息量"}
-  persuasion: {range: [0, 100], description: "论证、行动号召和说服倾向"}
-  calmness: {range: [0, 100], description: "克制、平静、不煽情"}
-  directness: {range: [0, 100], description: "直接表达结论和判断"}
-  narrative: {range: [0, 100], description: "事件、人物、过程和叙事推进"}
-
-rules:
-  - "Values describe intensity, not sentence quotas."
-  - "Do not maximize every dimension."
-  - "Profile constraints can override preset preferences when necessary."
+  range: [0, 100]
+  names: [structure, tone, skepticism, humanity, literary, humor, precision, density, persuasion, calmness, directness, narrative]
+constraint_strength: [soft, strong, hard]
+profile_constraint:
+  bounds: {min: [0, 100], max: [0, 100]}
+  avoid: [string]
+  default_strength: strong
+  explicit_user_style_value: overrides_bound_and_records_conflict
+  hard_task_constraint: cannot_be_overridden

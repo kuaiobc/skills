@@ -1,0 +1,50 @@
+
+scorecard:
+  task_score:
+    weight: 20
+    direction: maximize
+
+  factual_score:
+    weight: 20
+    direction: maximize
+
+  logic_score:
+    weight: 15
+    direction: maximize
+
+  audience_fit:
+    weight: 10
+    direction: maximize
+
+  language_fit:
+    weight: 10
+    direction: maximize
+
+  structure_score:
+    weight: 8
+    direction: maximize
+
+  behavior_coverage:
+    weight: 7
+    direction: maximize
+
+  style_fidelity:
+    weight: 5
+    direction: maximize
+
+  anti_ai_score:
+    weight: 3
+    direction: maximize
+
+  naturalness:
+    weight: 2
+    direction: maximize
+
+  drift_score:
+    direction: minimize
+    aggregate: false
+
+  note: >
+    Weights total 100 and define overall_score without drift_score. Drift is
+    reported separately because lower is better. Hard correctness failures
+    cannot be compensated by stylistic scores.

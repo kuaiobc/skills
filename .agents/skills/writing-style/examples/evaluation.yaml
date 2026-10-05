@@ -1,0 +1,42 @@
+
+document:
+  profile: blog
+  audience:
+    role: engineer
+    expertise: advanced
+  language: zh-CN
+
+style:
+  structure: 70
+  tone: 10
+  skepticism: 35
+  humanity: 75
+  literary: 10
+  precision: 90
+  density: 75
+
+evaluation:
+  task_score: 95
+  factual_score: 95
+  logic_score: 88
+  audience_fit: 92
+  language_fit: 90
+  structure_score: 84
+  behavior_coverage: 78
+  style_fidelity: 82
+  anti_ai_score: 86
+  naturalness: 84
+  drift_score: 12
+
+issues:
+  - id: issue-001
+    type: behavior
+    severity: medium
+    location: "section 3"
+    evidence: "The recommendation is stated but its operational trade-off is absent."
+    expected: "Expose the meaningful trade-off."
+    actual: "Recommendation is presented as universally beneficial."
+    suggested_action: "Add one concrete operational cost and boundary condition."
+    priority: 80
+    source_behavior: expose_tradeoffs
+    regression_risk: low

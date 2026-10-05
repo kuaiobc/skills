@@ -1,5 +1,61 @@
-version: 1.0
+
 profile: plain
 preset: balanced
-anti_ai: medium
-critic: standard
+
+language:
+  language: auto
+  locale: auto
+  selection: inferred
+
+audience:
+  role: auto
+  expertise: auto
+  context: auto
+  familiarity: auto
+
+dimensions:
+  structure: 65
+  tone: 55
+  skepticism: 20
+  humanity: 65
+  literary: 15
+  humor: 5
+  precision: 85
+  density: 65
+  persuasion: 25
+  calmness: 75
+  directness: 65
+  narrative: 25
+
+anti_ai:
+  level: medium
+
+composition:
+  provenance: enabled
+  conflict_resolution: enabled
+  hard_constraints: protected
+
+evaluation:
+  mode: standard
+  target_score: 85
+  minimum_behavior_coverage: 75
+  maximum_drift: 20
+
+rewrite:
+  enabled: true
+  max_iterations: 3
+  max_rewrite_rounds_per_iteration: 2
+  minimum_improvement: 2
+  regression_tolerance: 1
+  scope: targeted
+
+critics:
+  factual: enabled
+  task: enabled
+  logic: enabled
+  audience: enabled
+  language: enabled
+  behavior: enabled
+  style: enabled
+  anti_ai: enabled
+  drift: enabled

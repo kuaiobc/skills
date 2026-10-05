@@ -1,0 +1,52 @@
+
+evaluation:
+  modes:
+    fast:
+      dimensions:
+        - task_score
+        - factual_score
+        - logic_score
+        - audience_fit
+        - language_fit
+        - behavior_coverage
+        - anti_ai_score
+        - drift_score
+
+    standard:
+      dimensions:
+        - task_score
+        - factual_score
+        - logic_score
+        - audience_fit
+        - language_fit
+        - structure_score
+        - behavior_coverage
+        - style_fidelity
+        - anti_ai_score
+        - drift_score
+        - naturalness
+
+    deep:
+      dimensions:
+        - all_scorecard_dimensions
+      granularity: paragraph
+
+  score_range: [0, 100]
+
+  severity:
+    critical: 4
+    high: 3
+    medium: 2
+    low: 1
+
+  stop:
+    max_iterations: 3
+    max_rewrite_rounds_per_iteration: 2
+    minimum_improvement: 2
+    regression_tolerance: 1
+
+  score_semantics:
+    ordinary_scores: "0-100; higher is better"
+    drift_score: "0-100; lower is better"
+    overall_score: "weighted mean of scorecard dimensions only"
+    acceptance: "all configured quality gates must pass; stop conditions do not imply acceptance"

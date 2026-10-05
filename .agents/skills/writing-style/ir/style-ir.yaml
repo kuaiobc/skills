@@ -1,0 +1,10 @@
+style_ir:
+  request: {intent: null, document_goal: null, target_platform: null}
+  profile: {id: null, source: null, authority: null}
+  preset: {id: null, source: null, authority: null}
+  language: {language: null, locale: null, selection: null, source: null, authority: null, strength: null}
+  audience: {role: null, expertise: null, context: null, familiarity: null, source: null, authority: null, strength: null}
+  dimensions: {}
+  anti_ai: {level: null, source: null, authority: null}
+  constraints: []
+  provenance: {}

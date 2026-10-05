@@ -1,7 +1,7 @@
 name: blog
 purpose: Communicate an idea clearly while maintaining readable rhythm.
 constraints:
-  density: 40-80
+  density: {min: 40, max: 80}
 preferred_patterns:
   - strong_opening
   - progressive_disclosure

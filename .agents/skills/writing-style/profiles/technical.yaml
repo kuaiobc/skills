@@ -1,8 +1,8 @@
 name: technical
 purpose: Explain technical subjects clearly and support engineering decisions.
 constraints:
-  precision: minimum 85
-  structure: minimum 65
+  precision: {min: 85}
+  structure: {min: 65}
   avoid: [marketing_language, unsupported_claims, ornamental_metaphor]
 preferred_patterns:
   - conclusion_then_reason

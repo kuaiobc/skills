@@ -1,0 +1,17 @@
+merge:
+  scalar: highest_authority_wins
+  list: union_deduplicate_then_resolve
+  map: recursive_merge_each_field_by_authority
+  behavior: normalize_merge_apply_interactions_then_resolve
+  dimensions: highest_authority_value
+  profile_bounds: preserve_when_compatible; otherwise resolve_by_authority_and_record_conflict
+profile_bound_resolution:
+  default_strength: strong
+  explicit_user_value: overrides_profile_bound_unless_hard_task_constraint
+  record: effective_value_and_conflict_provenance
+  compatible_bounds: preserve_alongside_effective_value
+never:
+  - average_conflicting_explicit_values
+  - silently_delete_user_constraints
+  - downgrade_hard_constraints
+  - merge_raw_prompts

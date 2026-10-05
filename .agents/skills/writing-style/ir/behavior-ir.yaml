@@ -1,0 +1,9 @@
+behavior_ir:
+  behavior_fields: [id, intensity, priority, authority, status, constraint, validation, provenance]
+  priority: [high, medium, low]
+  behaviors: []
+  interactions: []
+  conflicts: []
+  constraints: []
+  validation: {checks: []}
+  provenance: {}
