@@ -1,0 +1,12 @@
+name: report
+purpose: Present findings, evidence, decisions, and implications.
+constraints:
+  precision: minimum 90
+  structure: minimum 75
+  literary: maximum 20
+preferred_patterns:
+  - executive_summary
+  - evidence
+  - interpretation
+  - risks
+  - recommendation

@@ -1,0 +1,12 @@
+name: business
+purpose: Communicate decisions, proposals, plans, and recommendations efficiently.
+constraints:
+  structure: minimum 70
+  persuasion: 30-75
+  density: minimum 60
+preferred_patterns:
+  - decision_first
+  - rationale
+  - impact
+  - risks
+  - next_step

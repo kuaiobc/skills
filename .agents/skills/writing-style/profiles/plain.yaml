@@ -1,0 +1,9 @@
+name: plain
+purpose: General-purpose clear writing.
+constraints:
+  precision: minimum 75
+  humanity: minimum 50
+preferred_patterns:
+  - direct_opening
+  - concrete_language
+  - natural_transitions

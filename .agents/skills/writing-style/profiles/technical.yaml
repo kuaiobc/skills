@@ -1,0 +1,11 @@
+name: technical
+purpose: Explain technical subjects clearly and support engineering decisions.
+constraints:
+  precision: minimum 85
+  structure: minimum 65
+  avoid: [marketing_language, unsupported_claims, ornamental_metaphor]
+preferred_patterns:
+  - conclusion_then_reason
+  - problem_context_solution_tradeoff
+  - example_before_abstraction
+  - explicit_boundary_conditions

@@ -1,0 +1,20 @@
+name: technical-thinker-70-10-20
+base: technical-thinker
+intent: "70% structure, 10% calm/plain tone, 20% skepticism"
+dimensions:
+  structure: 70
+  tone: 10
+  skepticism: 20
+  humanity: 75
+  literary: 10
+  humor: 5
+  precision: 90
+  density: 75
+  persuasion: 30
+  calmness: 85
+  directness: 80
+  narrative: 20
+notes:
+  - "The ratio is a stylistic weighting, not a sentence quota."
+  - "Use calm, plain, concrete language rather than direct imitation of a named author."
+  - "Question assumptions and trade-offs without turning every paragraph into a contrarian objection."

@@ -1,0 +1,13 @@
+name: architecture-governance
+artifact_types:
+  - governance-report
+  - architecture-review
+  - compliance-report
+base_profile: report
+recommended_preset: clear-technical
+style_constraints:
+  explicit_evidence: true
+  explicit_rule: true
+  explicit_outcome: true
+  preserve_pass_fail_unknown: true
+  avoid_rhetorical_language: true

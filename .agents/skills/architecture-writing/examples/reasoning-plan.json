@@ -1,0 +1,12 @@
+{
+  "question":"Should pricing be split from order-service?",
+  "objective":"compare architectural options",
+  "problem_type":"boundary-decision",
+  "methods":[
+    {"id":"m1","method":"MECE","purpose":"structure split drivers","inputs":["observations","ownership","change history"],"outputs":["driver categories"],"confidence":"HIGH"},
+    {"id":"m2","method":"decision-matrix","purpose":"compare options","inputs":["criteria","evidence"],"outputs":["option comparison"],"confidence":"MEDIUM"},
+    {"id":"m3","method":"SCQA","purpose":"communicate decision","inputs":["analysis","decision"],"outputs":["narrative"],"confidence":"HIGH"}
+  ],
+  "assumptions":[],
+  "unknowns":["future pricing traffic growth"]
+}

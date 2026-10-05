@@ -1,0 +1,46 @@
+{
+  "name": "architecture-writing",
+  "version": "1.7.0",
+  "title": "Architecture Writing / Engineering Skill",
+  "capabilities": [
+    "architecture-analysis",
+    "architecture-intelligence",
+    "architecture-reasoning",
+    "architecture-governance",
+    "artifact-generation",
+    "writing-style-integration"
+  ],
+  "reasoning_methods": [
+    "SCQA",
+    "MECE",
+    "5W1H",
+    "Logic Tree",
+    "5 Whys",
+    "Causal Chain",
+    "Fishbone",
+    "2D Matrix",
+    "Decision Matrix",
+    "Cost-Benefit",
+    "Risk Matrix",
+    "Reversibility",
+    "Impact-Effort",
+    "Pareto",
+    "Scenario Analysis",
+    "Sensitivity Analysis"
+  ],
+  "governance_outcomes": [
+    "PASS",
+    "FAIL",
+    "WARN",
+    "UNKNOWN",
+    "EXEMPT"
+  ],
+  "dependencies": [
+    "writing-style>=1.0.0"
+  ],
+  "artifact_profiles": [
+    "architecture-decision",
+    "architecture-explanation",
+    "architecture-governance"
+  ]
+}

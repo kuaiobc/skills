@@ -1,0 +1,5 @@
+version: 1.0
+profile: plain
+preset: balanced
+anti_ai: medium
+critic: standard

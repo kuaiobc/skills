@@ -1,0 +1,12 @@
+name: architecture-explanation
+artifact_types:
+  - architecture-document
+  - design-explanation
+  - technical-blog
+base_profile: technical
+recommended_preset: technical-thinker
+style_constraints:
+  progressive_disclosure: true
+  example_before_abstraction: true
+  concrete_terminology: true
+  avoid_jargon_without_definition: true

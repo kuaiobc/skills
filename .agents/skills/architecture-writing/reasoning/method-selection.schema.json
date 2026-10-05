@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Architecture Reasoning Plan",
+  "type":"object",
+  "required":["question","objective","methods"],
+  "properties":{
+    "question":{"type":"string"},
+    "objective":{"type":"string"},
+    "problem_type":{"type":"string"},
+    "methods":{"type":"array","items":{"type":"object","required":["id","method","purpose","inputs","outputs"],"properties":{"id":{"type":"string"},"method":{"type":"string"},"purpose":{"type":"string"},"inputs":{"type":"array","items":{"type":"string"}},"outputs":{"type":"array","items":{"type":"string"}},"confidence":{"type":"string","enum":["HIGH","MEDIUM","LOW","UNKNOWN"]}}}},
+    "assumptions":{"type":"array","items":{"type":"string"}},
+    "unknowns":{"type":"array","items":{"type":"string"}}
+  }
+}
