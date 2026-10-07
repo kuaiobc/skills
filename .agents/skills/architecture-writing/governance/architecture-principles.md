@@ -1,15 +1,5 @@
 # Architecture Principles
 
-A principle is a durable design preference or constraint expressed at a level above an individual implementation.
+Principles are durable directional statements such as explicit ownership, loose coupling, observable operations, least privilege, backward compatibility, or reversible change.
 
-A principle should contain:
-- id
-- statement
-- rationale
-- scope
-- owner
-- status
-- linked rules
-- review date
-
-Principles require explicit approval. A detected smell does not automatically create a principle.
+Each principle should explain intent, scope, rationale, and likely enforcement mechanism.

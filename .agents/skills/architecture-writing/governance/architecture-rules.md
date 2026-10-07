@@ -1,15 +1,3 @@
 # Architecture Rules
 
-Rules turn principles into testable conditions.
-
-A rule should define:
-- id
-- principle_id
-- scope
-- predicate
-- evidence_source
-- severity
-- enforcement
-- exception_policy
-
-Example: `domain modules must not access another domain's persistence layer directly`.
+Rules translate principles into checkable constraints. Include scope, condition, severity, rationale, exception policy, and machine-checkable form when feasible.

@@ -12,7 +12,9 @@
 
 ## Trade-offs
 
-## Decision
+## Recommendation
+
+## Human Decision
 
 ## Consequences
 

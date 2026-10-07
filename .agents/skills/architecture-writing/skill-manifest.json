@@ -1,14 +1,23 @@
 {
   "name": "architecture-writing",
-  "version": "1.7.0",
-  "title": "Architecture Writing / Engineering Skill",
+  "title": "Architecture Writing / Engineering Skill — Complete Reconstruction",
+  "status": "complete-reconstruction",
+  "version_line": "v1.7",
   "capabilities": [
-    "architecture-analysis",
+    "architecture-writing",
+    "requirements-analysis",
+    "repository-analysis",
+    "architecture-modeling",
     "architecture-intelligence",
     "architecture-reasoning",
+    "architecture-reasoning-runtime",
+    "architecture-design",
+    "architecture-diagrams",
+    "architecture-review",
+    "migration-design",
     "architecture-governance",
-    "artifact-generation",
-    "writing-style-integration"
+    "architecture-tooling",
+    "artifact-generation"
   ],
   "reasoning_methods": [
     "SCQA",
@@ -35,12 +44,49 @@
     "UNKNOWN",
     "EXEMPT"
   ],
-  "dependencies": [
-    "writing-style>=1.0.0"
+  "description": "Architecture Engineering Agent skill for evidence-grounded architecture discovery, analysis, modeling, reasoning, option generation, recommendation, design, writing, Mermaid diagrams, review, migration, governance, and tooling. The agent recommends; the human owns the final architecture decision. A minimal writing method is built in and an available writing-style skill may be used for style composition.",
+  "version": "1.7",
+  "release_type": "complete-reconstruction",
+  "entrypoints": {
+    "skill": "SKILL.md",
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md",
+    "core": "core/architecture-knowledge-model.md",
+    "workflow": "core/architecture-workflow.md",
+    "reasoning_runtime": "reasoning/runtime.md",
+    "architecture_model": "modeling/architecture-model.md",
+    "artifact_generation": "tooling/artifact-generator.md"
+  },
+  "artifact_families": [
+    "architecture-overview",
+    "system-design",
+    "service-design",
+    "integration-design",
+    "data-architecture",
+    "deployment-architecture",
+    "security-architecture",
+    "reliability-design",
+    "performance-design",
+    "technical-proposal",
+    "adr",
+    "architecture-review",
+    "migration-plan",
+    "governance-report",
+    "mermaid-diagrams"
   ],
-  "artifact_profiles": [
-    "architecture-decision",
-    "architecture-explanation",
-    "architecture-governance"
-  ]
+  "decision_policy": {
+    "agent_role": "generate_options_compare_and_recommend",
+    "human_role": "make_or_confirm_final_architecture_decision",
+    "fields": [
+      "options",
+      "recommended_option",
+      "human_decision",
+      "decision_status"
+    ]
+  },
+  "writing_policy": {
+    "built_in": "minimal technical architecture writing method",
+    "external_skill": "writing-style when available",
+    "ownership": "architecture semantics remain owned by architecture-writing"
+  }
 }

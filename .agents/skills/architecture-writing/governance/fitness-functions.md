@@ -1,12 +1,3 @@
 # Fitness Functions
 
-A fitness function is a repeatable measurable test of an architectural property.
-
-Examples:
-- no dependency cycles
-- dependency direction remains acyclic
-- no cross-domain database access
-- public API compatibility
-- required timeout/retry policy exists
-
-Thresholds must come from policy or explicit decision; never invent numeric limits.
+Fitness functions measure architecture properties continuously. A useful function defines target, measurement, scope, frequency, threshold, and interpretation. Do not confuse a fitness function with a subjective checklist item.

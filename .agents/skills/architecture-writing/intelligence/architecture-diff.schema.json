@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Architecture Diff",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "kind",
+      "severity",
+      "evidence"
+    ],
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "kind": {
+        "type": "string"
+      },
+      "severity": {
+        "enum": [
+          "BLOCKER",
+          "MAJOR",
+          "MINOR",
+          "INFO"
+        ]
+      },
+      "affected_entities": {
+        "type": "array"
+      },
+      "evidence": {
+        "type": "array"
+      },
+      "impact_hypothesis": {
+        "type": "string"
+      },
+      "validation": {
+        "type": "array"
+      }
+    }
+  }
+}

@@ -16,6 +16,8 @@
 
 ## Synthesis
 
-## Decision Implication
+## Recommendation / Decision Implication
+
+## Human Decision
 
 ## Validation Needed

@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Architecture Reasoning Plan",
+  "type": "object",
+  "required": [
+    "id",
+    "problem",
+    "objective",
+    "steps"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "problem": {
+      "type": "string"
+    },
+    "objective": {
+      "type": "string"
+    },
+    "inputs": {
+      "type": "array"
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "method",
+          "purpose",
+          "outputs"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "method": {
+            "type": "string"
+          },
+          "purpose": {
+            "type": "string"
+          },
+          "inputs": {
+            "type": "array"
+          },
+          "depends_on": {
+            "type": "array"
+          },
+          "outputs": {
+            "type": "array"
+          },
+          "guards": {
+            "type": "array"
+          },
+          "stop_conditions": {
+            "type": "array"
+          },
+          "confidence_policy": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "stop_conditions": {
+      "type": "array"
+    },
+    "sensitivity": {
+      "type": "object"
+    }
+  }
+}

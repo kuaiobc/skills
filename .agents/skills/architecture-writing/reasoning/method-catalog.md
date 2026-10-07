@@ -1,20 +1,29 @@
-# Method Catalog
+# Reasoning Method Catalog
 
-| Method | Primary use | Output |
-|---|---|---|
-| SCQA | narrative synthesis | decision narrative |
-| MECE | structuring | category tree |
-| 5W1H | clarification | question inventory |
-| Logic Tree | decomposition | issue tree |
-| 5 Whys | root cause | causal hypothesis chain |
-| Causal Chain | mechanism | evidence-linked causal path |
-| Fishbone | cause discovery | candidate causes |
-| 2D Matrix | segmentation | quadrant placement |
-| Decision Matrix | option comparison | scored/qualitative comparison |
-| Cost-Benefit | value comparison | benefit/cost view |
-| Risk Matrix | risk comparison | risk profile |
-| Reversibility | commitment strength | reversibility assessment |
-| Impact-Effort | prioritization | priority quadrants |
-| Pareto | concentration | measured concentration |
-| Scenario | uncertainty | plausible futures |
-| Sensitivity | robustness | decision stability |
+## Problem structuring
+- SCQA — communicate situation, complication, question, answer.
+- MECE — partition a problem into useful non-overlapping buckets.
+- 5W1H — clarify scope and context.
+- Logic Tree — decompose a question into branches.
+
+## Root cause
+- 5 Whys — recursively challenge causal assumptions.
+- Causal Chain — model mechanism from cause to consequence.
+- Fishbone — organize cause families.
+
+## Decision
+- 2D Matrix — expose trade-space on two material dimensions.
+- Decision Matrix — compare options against weighted criteria.
+- Cost-Benefit — compare expected benefits and costs.
+- Risk Matrix — assess likelihood/impact.
+- Reversibility — account for cost of being wrong and exit options.
+
+## Prioritization
+- Impact-Effort
+- Pareto
+
+## Uncertainty
+- Scenario Analysis
+- Sensitivity Analysis
+
+Each method must declare purpose, inputs, procedure, outputs, evidence requirements, failure modes, and composition guidance.

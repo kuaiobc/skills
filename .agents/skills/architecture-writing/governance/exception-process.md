@@ -1,13 +1,3 @@
-# Exception Process
+# Architecture Exception Process
 
-An exception must contain:
-- rule_id
-- reason
-- scope
-- owner
-- approval
-- expiry
-- compensating_control
-- remediation_plan
-
-Expired exceptions must not silently continue to suppress violations.
+Exceptions require reason, scope, owner, approval, expiry, compensating controls, and review date. Exceptions should be visible and automatically re-evaluated when they expire.

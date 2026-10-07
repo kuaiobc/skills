@@ -1,17 +1,13 @@
-# Method Composition
+# Reasoning Method Composition
 
-Valid examples:
+Composition is a directed chain, not a list.
 
-`5W1H → MECE → Logic Tree`
+Example:
+`5W1H → MECE → Logic Tree → Decision Matrix → Sensitivity`
 
-`MECE → Causal Chain → 5 Whys`
-
-`MECE → Boundary Analysis → 2D Matrix → Decision Matrix`
-
-`Cost-Benefit → Risk Matrix → Reversibility → Decision Matrix`
-
-`Scenario Analysis → Sensitivity Analysis → Decision Matrix`
-
-`Analysis → SCQA` for communication synthesis.
-
-Avoid chaining methods merely for appearance. Each added method must resolve a known analytical need.
+Rules:
+- outputs of one method become explicit inputs to the next;
+- incompatible assumptions are surfaced;
+- no method may silently overwrite another result;
+- synthesis distinguishes evidence from interpretation;
+- communication methods such as SCQA should normally occur after substantive analysis.

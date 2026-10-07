@@ -1,8 +1,10 @@
-# Evidence Confidence
+# Confidence Model
 
-- HIGH: direct evidence
-- MEDIUM: strong inference supported by multiple signals
-- LOW: weak inference
-- UNKNOWN: insufficient evidence
+Use confidence for evidence and conclusions separately.
 
-Reasoning must preserve confidence rather than flatten it.
+- HIGH: direct, recent, scoped evidence.
+- MEDIUM: strong inference with limited uncertainty.
+- LOW: weak inference or incomplete coverage.
+- UNKNOWN: insufficient evidence.
+
+Confidence never overrides severity or importance.

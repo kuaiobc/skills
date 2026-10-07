@@ -1,13 +1,13 @@
 # Reasoning Quality Checklist
 
-- [ ] Question is explicit
-- [ ] Objective is explicit
-- [ ] Method is appropriate
-- [ ] Evidence is traceable
-- [ ] Assumptions are separated
-- [ ] Unknowns remain unknown
-- [ ] Criteria are not double-counted
-- [ ] Scores have stated meaning
+- [ ] Question is classified
+- [ ] Method selection is justified
+- [ ] Inputs/evidence are explicit
+- [ ] Method contracts are satisfied
+- [ ] Results retain lineage
 - [ ] Contradictions are surfaced
-- [ ] Sensitivity is checked where material
-- [ ] Decision follows from analysis
+- [ ] Unknowns are preserved
+- [ ] Scoring assumptions are explicit
+- [ ] Sensitivity is tested where material
+- [ ] Synthesis does not overclaim
+- [ ] Decision is distinct from analysis

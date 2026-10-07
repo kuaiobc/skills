@@ -1,23 +1,6 @@
-# Reasoning Engine
+# Architecture Reasoning System
 
-The Reasoning Engine converts an architecture question into a reproducible analysis plan.
+Reasoning is a controlled method for transforming architecture questions into inspectable conclusions. It operates on the architecture knowledge model and evidence ledger.
 
-`Question → Objective → Problem Type → Method Chain → Evidence → Analysis → Synthesis → Decision`
-
-A method is an analytical operator. It has:
-
-- purpose
-- inputs
-- procedure
-- outputs
-- failure modes
-- evidence requirements
-- composition rules
-
-## Composition
-
-Methods may be chained when outputs are compatible. Example:
-
-`MECE → Logic Tree → Causal Chain → Decision Matrix → SCQA`
-
-The last method may synthesize the result for humans; it must not alter the underlying evidence.
+The reasoning stack is:
+`Classification → Selection → Composition → Plan → Validate → Execute → Challenge → Synthesize → Decision Candidate`

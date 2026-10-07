@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Reasoning Runtime Result",
+  "type": "object",
+  "required": [
+    "plan_id",
+    "status",
+    "steps"
+  ],
+  "properties": {
+    "plan_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "READY",
+        "RUNNING",
+        "BLOCKED",
+        "COMPLETED",
+        "COMPLETED_WITH_UNKNOWN",
+        "FAILED"
+      ]
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "step_id",
+          "status"
+        ],
+        "properties": {
+          "step_id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "inputs": {
+            "type": "array"
+          },
+          "evidence_used": {
+            "type": "array"
+          },
+          "outputs": {},
+          "confidence": {
+            "type": "string"
+          },
+          "warnings": {
+            "type": "array"
+          },
+          "lineage": {
+            "type": "array"
+          }
+        }
+      }
+    },
+    "contradictions": {
+      "type": "array"
+    },
+    "unknowns": {
+      "type": "array"
+    },
+    "decision_candidate": {},
+    "sensitivity": {}
+  }
+}

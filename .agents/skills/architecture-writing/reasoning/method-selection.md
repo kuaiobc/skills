@@ -1,33 +1,14 @@
-# Method Selection
+# Reasoning Method Selection
 
-## Selection algorithm
+Select methods based on question type, uncertainty, evidence availability, and decision stakes.
 
-1. State the question.
-2. Identify the analytical objective.
-3. Identify uncertainty and evidence quality.
-4. Classify the problem.
-5. Select one primary method.
-6. Add only methods that resolve a known limitation of the primary method.
-7. Define inputs and expected outputs.
-8. Run the chain.
-9. Validate conclusions against evidence.
+Examples:
+- vague problem → 5W1H → MECE → Logic Tree
+- architecture issue explanation → SCQA → MECE
+- root cause → Causal Chain → 5 Whys
+- alternative comparison → Decision Matrix + Risk Matrix + Reversibility
+- boundary question → MECE + 2D Matrix + boundary evidence
+- migration → Cost-Benefit + Risk Matrix + Reversibility + Scenario
+- uncertain forecast → Scenario + Sensitivity
 
-## Decision table
-
-| Problem shape | Primary | Optional companion |
-|---|---|---|
-| vague / broad | 5W1H | MECE, Logic Tree |
-| overloaded / mixed causes | MECE | Logic Tree |
-| root cause | Causal Chain | 5 Whys |
-| alternatives | Decision Matrix | Risk, Cost-Benefit |
-| prioritization | Impact-Effort | Pareto |
-| uncertainty | Scenario Analysis | Sensitivity |
-| executive communication | SCQA | Pyramid-style synthesis |
-
-## Anti-patterns
-
-- Method shopping until the desired conclusion appears.
-- Using scores without evidence.
-- Treating category completeness as factual completeness.
-- Using SCQA as a substitute for analysis.
-- Using a 2D matrix when more than two dimensions materially determine the decision without explaining the loss of information.
+Selection should state why a method is appropriate and what it cannot prove.

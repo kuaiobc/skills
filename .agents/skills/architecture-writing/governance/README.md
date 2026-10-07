@@ -1,10 +1,7 @@
 # Architecture Governance
 
-Governance checks conformance to explicit principles and rules.
+Governance is the policy layer over architecture decisions.
 
-`Architecture Diff → Applicable Rules → Evidence → Evaluation → Gate`
+`Principle → Rule → Fitness Function → Policy → Check → Violation → Exception / Remediation → Report`
 
-Possible outcomes:
-`PASS | FAIL | WARN | UNKNOWN | EXEMPT`
-
-Exceptions are time-bounded and require ownership and compensating controls.
+Governance does not replace architecture reasoning and does not invent decisions from violations.

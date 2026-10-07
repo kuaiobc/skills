@@ -1,0 +1,35 @@
+{
+  "plan_id": "boundary-review",
+  "status": "COMPLETED_WITH_UNKNOWN",
+  "steps": [
+    {
+      "step_id": "partition",
+      "status": "COMPLETED",
+      "evidence_used": [
+        "E1",
+        "E2"
+      ],
+      "outputs": [
+        "dimensions"
+      ],
+      "confidence": "HIGH"
+    },
+    {
+      "step_id": "compare",
+      "status": "COMPLETED_WITH_UNKNOWN",
+      "evidence_used": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "outputs": [
+        "ranked_options"
+      ],
+      "confidence": "MEDIUM"
+    }
+  ],
+  "unknowns": [
+    "team ownership history"
+  ],
+  "decision_candidate": "Option B conditional on ownership validation"
+}

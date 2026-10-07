@@ -1,9 +1,7 @@
 # Architecture Compliance
 
-Compliance is a rule-evaluation result, not an architectural design decision.
+Evaluate applicable rules against architecture diff, repository evidence, runtime evidence, and declared exceptions.
 
-`FAIL` means an applicable rule was violated.
-`UNKNOWN` means evidence is insufficient to determine compliance.
-`EXEMPT` means an approved active exception applies.
+Outcomes: PASS, FAIL, WARN, UNKNOWN, EXEMPT.
 
-A governance report should distinguish all three.
+`UNKNOWN` is not the same as `FAIL`; insufficient evidence should trigger investigation unless the policy explicitly requires proof.

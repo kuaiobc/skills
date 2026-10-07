@@ -1,176 +1,568 @@
----
-name: architecture-writing
-description: Analyze software architecture, make evidence-based design decisions, govern architectural changes, and produce consistent architecture artifacts. Use for architecture reviews, ADRs, architecture explanations, governance checks, and structured architecture reasoning.
-metadata:
-  short-description: Evidence-driven architecture analysis and artifact writing
----
+# Architecture Writing / Engineering Skill
 
-# Architecture Writing / Engineering Skill v1.7
+## Skill identity
 
-## Purpose
+**Name:** `architecture-writing`
 
-This skill turns architecture work into an evidence-driven engineering workflow that can discover systems, reason about architectural problems, make explicit decisions, govern changes, and generate consistent artifacts.
+**Skill line:** v1.7 complete reconstruction
 
-v1.7 keeps the Architecture Reasoning Engine and adds a **Writing Style Integration Layer**. Reasoning remains an analytical function; writing style is a separate presentation function supplied preferably by the standalone `writing-style` Skill.
+**Role:** Architecture Engineering Agent skill for discovering, analyzing, modeling, reasoning about, designing, documenting, reviewing, migrating, and governing software architecture.
 
-## Core pipeline
+**Primary output:** Evidence-grounded architecture recommendations and a coherent set of architecture artifacts derived from one canonical architecture/decision model. The agent fills `recommended_option`. `human_decision` stays `pending` until a person confirms, rejects, or modifies it.
 
-`DISCOVER → OBSERVE → INTELLIGENCE → CLASSIFY → SELECT METHOD → ANALYZE → SYNTHESIZE → DECIDE → GOVERN → SELECT ARTIFACT → SELECT STYLE → RENDER → VALIDATE`
+**Execution principle:** The Reasoning Runtime is an execution layer inside the skill. It is not the skill itself and must never replace Architecture Writing, Analysis, Modeling, Design, Diagramming, Review, Migration, or Governance capabilities.
 
-## Internal decision model
+## When to use this skill
 
-Maintain a single structured model containing at least:
+Use this skill when a request involves one or more of the following:
 
-- context
-- problem
-- goals
-- non_goals
-- constraints
-- architecture_drivers
-- current_state
-- boundaries
-- critical_flows
+- designing a new system or major subsystem;
+- analyzing an existing repository or system architecture;
+- explaining or documenting an architecture decision;
+- comparing architecture options and trade-offs;
+- identifying architecture boundaries, dependencies, smells, risks, or change impact;
+- deriving architecture drivers from requirements, constraints, or evidence;
+- generating architecture diagrams, especially Mermaid diagrams;
+- producing ADRs, architecture overviews, technical proposals, system/service/data/deployment designs;
+- reviewing architecture quality, consistency, security, reliability, performance, or operability;
+- planning architecture migration, modernization, data migration, rollout, or rollback;
+- checking architecture governance rules or fitness functions;
+- running structured architecture reasoning against repository/system evidence.
+
+Do not use this skill as a generic prose-writing skill when there is no architecture problem, decision, design, review, or engineering context.
+
+## What the agent must do
+
+The agent should treat an architecture task as an engineering investigation rather than a document-generation request.
+
+The normal sequence is:
+
+```text
+Intent / Question
+      ↓
+Requirement & Constraint Discovery
+      ↓
+Repository / System Discovery
+      ↓
+Architecture Model
+      ↓
+Architecture Intelligence
+      ↓
+Drivers / Quality Attributes
+      ↓
+Problem Framing
+      ↓
+Reasoning Plan
+      ↓
+Reasoning Runtime
+      ↓
+Options / Trade-offs
+      ↓
+Recommendation
+      ↓
+Human Decision
+      ↓
+Architecture Design
+      ↓
+Diagrams / ADR / Documents
+      ↓
+Validation / Review
+      ↓
+Migration / Evolution
+      ↓
+Governance
+```
+
+Not every request requires every stage. The agent should select the smallest complete workflow that can support the requested outcome while preserving causal traceability.
+
+## Canonical architecture story
+
+For substantial architecture work, preserve this chain:
+
+```text
+Context
+ → Problem
+ → Requirements
+ → Constraints
+ → Architecture Drivers
+ → Current State
+ → Architecture Gap
+ → Options
+ → Trade-offs
+ → Recommendation
+ → Human Decision
+ → Consequences
+ → Risks
+ → Validation
+ → Migration
+ → Evolution
+```
+
+Reasoning methods such as SCQA, MECE, decision matrices, causal analysis, and scenario analysis support this chain. They do not replace it.
+
+## Canonical architecture knowledge model
+
+Maintain one coherent internal model. At minimum it should be able to represent:
+
+### Context
+
+- stakeholders
+- business/product intent
+- system scope
+- external systems
+- business capabilities
+- use cases
+
+### Requirements
+
+- functional requirements
+- non-functional requirements
+- quality-attribute scenarios
+- acceptance criteria
+- compliance requirements
+- operational requirements
+
+### Constraints and uncertainty
+
+- technical constraints
+- organizational constraints
+- regulatory constraints
+- budget/time constraints
+- assumptions
+- unknowns
+- risks
+- open questions
+
+### Architecture
+
+- systems
+- services
+- modules
+- components
+- interfaces
+- data stores
+- events
+- external dependencies
+- deployment units
+- trust boundaries
+- ownership
+- dependencies
+- calls
+- events
+- data flows
+- deployment relationships
+
+### Intelligence
+
 - observations
 - evidence
-- assumptions
-- architecture_smells
+- inferences
+- claims
+- architecture smells
+- boundary candidates
+- driver inference
+- architecture diff
+- change impact
+- confidence
+- contradictions
+
+### Decision
+
+- architecture drivers
+- decision criteria
 - options
-- reasoning_plan
-- reasoning_results
-- tradeoffs
-- decision
+- trade-offs
+- recommended_option
+- human_decision
+- rejected alternatives
 - consequences
 - risks
-- principles
-- rules
-- applicable_rules
-- checks
-- violations
-- exceptions
-- compliance
+- reversibility
 - validation
-- migration
-- open_questions
 
-## Reasoning rules
+### Evolution
 
-1. Select a method based on the problem and objective, not by habit.
-2. A method must consume explicit inputs and produce inspectable outputs.
-3. Methods organize evidence; they do not create evidence.
-4. Unknown evidence must remain UNKNOWN rather than becoming invented scores or facts.
-5. A matrix score requires a stated criterion and evidence or an explicitly marked expert judgment.
-6. MECE is a heuristic for useful partitioning, not a proof that categories are mathematically exhaustive.
-7. SCQA is primarily a synthesis and communication structure, not evidence for a decision.
-8. A reasoning result is not automatically an architecture decision.
-9. Contradictory evidence must be surfaced, not silently averaged away.
-10. Every consequential conclusion should trace to evidence, assumptions, or an explicit decision rule.
+- current state
+- target state
+- transition states
+- migration units
+- compatibility windows
+- rollout
+- rollback
+- decommissioning
 
-## Method families
+## Evidence discipline
 
-### Problem structuring
+The following are different objects and must not be silently merged:
+
+```text
+Evidence
+  ↓
+Observation
+  ↓
+Inference
+  ↓
+Claim
+  ↓
+Decision
+```
+
+Evidence may come from repository inspection, runtime metrics, production observations, documentation, tests, configuration, explicit user requirements, external references, or expert judgment.
+
+Rules:
+
+1. Never turn an inference into a fact merely because it is plausible.
+2. Never turn an assumption into a requirement.
+3. Never treat code structure as proof of business intent.
+4. Preserve source, scope, freshness, confidence, and contradictions for consequential evidence.
+5. A decision-critical unknown must produce a validation action.
+6. Expert judgment must be labeled as judgment rather than presented as measured evidence.
+
+## Architecture intelligence rules
+
+Architecture intelligence detects or infers signals; it does not directly decide the architecture.
+
+Examples:
+
+```text
+Architecture Smell       → investigation
+Boundary Candidate       → boundary evaluation
+Driver Inference         → driver validation
+Dependency               → impact analysis
+Architecture Diff        → change impact analysis
+```
+
+Never silently perform:
+
+```text
+Smell → microservice extraction
+Boundary candidate → service boundary
+Dependency → failure
+Code diff → architecture change
+Inference → requirement
+```
+
+## Reasoning system
+
+The reasoning system has four layers:
+
+```text
+Method Catalog
+      ↓
+Method Selection
+      ↓
+Method Composition
+      ↓
+Reasoning Runtime
+```
+
+The runtime executes a validated reasoning plan against registered evidence and architecture-model inputs.
+
+Available reasoning families include:
+
 - SCQA
 - MECE
 - 5W1H
 - Logic Tree
-
-### Root cause and causality
 - 5 Whys
 - Causal Chain
-- Fishbone-style cause categories
-
-### Comparison and decision
-- 2D Matrix
+- Fishbone
+- Two-Dimensional Matrix
 - Decision Matrix
-- Cost-Benefit
+- Cost-Benefit Analysis
 - Risk Matrix
 - Reversibility Analysis
-
-### Prioritization
 - Impact-Effort
 - Pareto
-
-### Uncertainty and future change
 - Scenario Analysis
 - Sensitivity Analysis
 
-## Method selection
+Method selection is objective-driven. Do not mechanically apply every method.
 
-Use `reasoning/method-selection.md` and the machine-readable `reasoning/method-selection.schema.json` to construct a reasoning plan.
+## Runtime contract
 
-Typical mappings:
+A reasoning plan should identify:
 
-| Objective | Preferred methods |
-|---|---|
-| Clarify a vague problem | 5W1H → MECE → Logic Tree |
-| Explain an architecture issue | SCQA → MECE |
-| Find root cause | Causal Chain → 5 Whys |
-| Compare alternatives | Decision Matrix + Risk Matrix |
-| Prioritize technical debt | Impact-Effort + Pareto |
-| Evaluate a boundary | MECE + Boundary Analysis + 2D Matrix |
-| Assess migration | Cost-Benefit + Risk Matrix + Reversibility |
-| Reason under uncertainty | Scenario + Sensitivity Analysis |
+- problem
+- objective
+- inputs
+- steps
+- method per step
+- dependencies
+- evidence requirements
+- expected outputs
+- guards
+- stop conditions
+- confidence policy
+- contradiction checks
+- sensitivity checks
 
-## Governance integration
+Runtime states:
 
-Reasoning may propose or compare decisions. Governance evaluates an already-established principle/rule set.
+`DRAFT → READY → RUNNING → COMPLETED | COMPLETED_WITH_UNKNOWN | BLOCKED | FAILED`
 
-`Architecture Diff → Applicable Rules → Evaluation → PASS / FAIL / WARN / UNKNOWN → Exception or Remediation → Governance Report`
+Runtime invariants:
 
-Governance must not silently invent new rules from smells or reasoning results.
+1. A step cannot consume unregistered evidence.
+2. A method cannot create factual evidence.
+3. Derived claims reference source evidence or prior derived results.
+4. Unknown remains explicit.
+5. Low-confidence intermediate results cannot silently become high-confidence decisions.
+6. Contradictions must be surfaced rather than averaged away.
+7. Same inputs, plan, method versions, and configuration should be reproducible.
+
+## Architecture design
+
+Architecture design must make alternatives explicit before selecting a consequential option.
+
+At minimum:
+
+```text
+Option
+ → Decision Criteria
+ → Evidence
+ → Trade-offs
+ → Risks
+ → Consequences
+ → Reversibility
+ → Decision
+```
+
+Architecture tactics must be tied to the quality attribute or architecture driver they are intended to improve.
+
+## Quality attributes
+
+When relevant, evaluate:
+
+- performance
+- scalability
+- availability
+- reliability
+- resilience
+- consistency
+- security
+- maintainability
+- testability
+- observability
+- operability
+- cost
+- portability
+- interoperability
+- deployability
+
+Use the scenario form:
+
+```text
+Quality Attribute
+ → Scenario
+ → Measure
+ → Target
+ → Architecture Tactic
+ → Validation
+```
+
+## Diagram rules
+
+The diagram layer is Mermaid-first.
+
+Supported diagram purposes include:
+
+- context
+- container
+- component
+- sequence
+- deployment
+- data flow
+- integration
+- migration
+
+A diagram is a projection of the architecture model, not an independent source of truth.
+
+Before producing a diagram, determine:
+
+1. what question the diagram answers;
+2. who reads it;
+3. required abstraction level;
+4. entities and relationships that matter;
+5. what must be omitted;
+6. whether the diagram agrees with the decision model and prose.
+
+Do not create diagrams merely for decoration.
+
+## Architecture review
+
+Review at the appropriate level:
+
+- requirement review
+- architecture review
+- design review
+- security review
+- reliability review
+- performance/scale review
+- operational review
+- migration review
+- governance review
+
+A review finding must distinguish evidence, severity, consequence, and recommended action.
+
+## Migration
+
+Migration is an architecture decision surface, not an implementation appendix.
+
+Model:
+
+```text
+Current State
+ → Transition State(s)
+ → Migration Units
+ → Compatibility
+ → Validation
+ → Cutover
+ → Rollback
+ → Target State
+ → Decommission
+```
+
+Consider when applicable:
+
+- strangler migration
+- parallel run
+- expand/contract
+- dual write
+- backfill
+- shadow traffic
+- feature flags
+- phased rollout
+- data reconciliation
+- rollback
+- compatibility windows
+
+## Governance
+
+Governance follows:
+
+```text
+Principle
+ → Rule
+ → Fitness Function / Policy
+ → Check
+ → Violation
+ → Exception or Remediation
+ → Governance Report
+```
+
+Governance evaluates established architecture rules; it does not invent architecture decisions.
+
+`UNKNOWN` is not automatically `FAIL`.
+
+Exceptions should have:
+
+- reason
+- scope
+- owner
+- expiry
+- compensating control
+- approval
+
+## Tooling
+
+Where tools are available, use the tooling layer to obtain evidence instead of guessing.
+
+Canonical tooling flow:
+
+```text
+Repository Scanner
+ → Dependency Analyzer
+ → Architecture Graph
+ → Intelligence
+ → Reasoning
+ → Decision Model
+ → Artifact Generator
+ → ADR Sync
+```
+
+The tooling layer is evidence acquisition and artifact synchronization infrastructure. It must not bypass the architecture knowledge model.
 
 ## Artifact generation
 
-Generate architecture documents, ADRs, diagrams, reviews, migration plans, and governance reports from the same decision model. Do not maintain contradictory copies of the decision.
+Typical artifacts include:
 
-## Quality gates
+- architecture overview
+- system design
+- service design
+- integration design
+- data architecture
+- deployment architecture
+- security architecture
+- reliability design
+- performance design
+- technical proposal
+- ADR
+- architecture review
+- migration plan
+- governance report
 
-Before finalizing:
+All artifacts should be projections of the same model. If two artifacts disagree, reconcile the model before publishing.
 
-- evidence traceability is present
-- assumptions are separated from facts
-- reasoning method is appropriate to the question
-- calculations and scoring are reproducible
-- uncertainty is visible
-- options are comparable on stated criteria
-- decision follows from analysis
-- governance rules are explicit
-- exceptions have expiry
-- diagrams and prose agree
-- no unsupported architecture claims are presented as facts
+## Output quality gate
 
+Before delivering substantial architecture work, verify:
 
-## Writing style integration
+- problem and scope are explicit;
+- requirements and constraints are separated;
+- architecture drivers are explicit and prioritized;
+- current state is evidence-grounded;
+- alternatives are considered;
+- trade-offs are explicit;
+- quality attributes have scenarios and validation targets where relevant;
+- security and trust boundaries are addressed where relevant;
+- failure modes and operational implications are addressed;
+- ownership and deployment implications are addressed;
+- diagrams agree with the model;
+- ADR and prose agree;
+- migration and rollback are addressed when change is involved;
+- governance status is explicit where applicable;
+- unresolved unknowns are visible;
+- consequential claims have evidence or explicit assumptions.
 
-Architecture Writing v1.7 separates **reasoning quality** from **expression quality**. The architecture decision model remains the source of truth. A standalone `writing-style` Skill may be invoked after the decision is established to render ADRs, architecture documents, reviews, reports, migration plans, and technical articles.
+## File usage policy
 
-### Style contract
+Read only the parts needed for the current task, but preserve the hierarchy:
 
-1. Select style from artifact type, audience, purpose, and explicit user preference.
-2. Treat style weights as behavioral tendencies, not literal sentence percentages.
-3. Do not use author imitation as an internal correctness criterion; translate requested influences into abstract properties such as structure, calmness, skepticism, literary density, precision, and humanity.
-4. Anti-AI processing is a presentation quality gate, not a reasoning method.
-5. Never allow style editing to change facts, evidence, assumptions, scores, confidence, governance outcomes, constraints, risks, or decisions.
-6. Any newly introduced factual claim must return to the decision model for validation.
+1. `core/` for the canonical model and workflow;
+2. `discovery/` for evidence acquisition and problem understanding;
+3. `modeling/` for architecture semantics;
+4. `drivers/` for decision drivers and quality attributes;
+5. `intelligence/` for inferred architecture signals;
+6. `reasoning/` for structured analysis and runtime execution;
+7. `design/` for options and decisions;
+8. `diagrams/` for visual projections;
+9. `writing/` for document construction;
+10. `review/` for validation;
+11. `migration/` for evolution;
+12. `governance/` for policy/compliance;
+13. `tooling/` for evidence and synchronization.
 
-### Recommended external dependency
+Use `templates/`, `checklists/`, `workflows/`, and `examples/` as operational assets after the relevant model is populated.
 
-Use the separate `writing-style` Skill when available. See `writing/style-contract.md` and `writing/workflows/render-artifact.md` for the integration contract and local fallback.
+## Anti-patterns
 
-### Artifact-specific defaults
+Avoid:
 
-| Artifact | Profile | Priority |
-|---|---|---|
-| ADR / decision | architecture-decision | decision clarity, trade-offs, uncertainty |
-| Architecture explanation | architecture-explanation | progressive disclosure, examples, precision |
-| Review / governance report | architecture-governance | evidence, rules, outcome, traceability |
+- document-first architecture with no model;
+- architecture by template completion;
+- architecture by technology popularity;
+- reasoning without evidence;
+- fake precision in scoring;
+- hiding uncertainty;
+- treating inferred signals as facts;
+- producing diagrams that contradict prose;
+- ADRs that document a decision not represented in the design;
+- migration plans without rollback;
+- governance rules that silently make architectural decisions;
+- writing `human_decision` without a person's selection;
+- runtime complexity that is not justified by the problem.
 
-## v1.7 quality gates
+## Reconstruction boundary
 
-In addition to v1.6 gates:
-
-- selected writing profile is appropriate to artifact and audience
-- style has not altered technical substance
-- evidence confidence is preserved through rewriting
-- Anti-AI cleanup removed mechanical phrasing without removing necessary structure
-- skeptical language is backed by evidence or clearly marked as judgment
-- summaries and headings remain traceable to the decision model
+This package intentionally keeps the accumulated v1.0–v1.7 capabilities under one v1.7 skill line. It is a capability reconstruction, not a new conceptual version. New concepts should not be added merely to make the package appear more advanced; future evolution should first prove that an existing capability cannot express the requirement.
