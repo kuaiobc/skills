@@ -1,8 +1,8 @@
 # Skills
 
-Cursor agent skills for architecture work and for controlling how a document is written.
+Agent skills for architecture work and for controlling how a document is written. They are instructions for a coding agent, like Codex, Claude Code, OpenCode, and Cursor. Any agent that loads a `SKILL.md` can use them.
 
-Each skill lives in `.agents/skills/<name>/` and starts at that directory's `SKILL.md`.
+Each skill lives in `.agents/skills/<name>/` and starts at that directory's `SKILL.md`. Point the agent at that directory, or copy or link it into the skills location that agent already uses.
 
 ## Skills
 
