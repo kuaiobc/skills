@@ -9,3 +9,6 @@ preferred_patterns:
   - problem_context_solution_tradeoff
   - example_before_abstraction
   - explicit_boundary_conditions
+zh_cn_user_facing:
+  apply_when: output language is zh-CN
+  rules: ../audience/engineer.md#user-facing-chinese

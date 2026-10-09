@@ -11,5 +11,10 @@ Watch for formulaic phrases such as:
 - 随着……不断发展
 - 可以看出
 - 总而言之
+- 阶段性
+- 体系化
+- 闭环
+- 赋能
+- 沉淀
 
-These are not absolute banned words. Rewrite when they merely announce structure or inflate importance.
+These are not absolute banned words. Rewrite when they merely announce structure or inflate importance. For “阶段性”, “体系化”, “闭环”, “赋能”, and “沉淀”, name the action and the evidence when the word stands for something concrete.

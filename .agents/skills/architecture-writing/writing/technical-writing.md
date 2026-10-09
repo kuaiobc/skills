@@ -31,6 +31,19 @@ A metaphor may restate a relationship the model already records. It cannot suppl
 
 Headings, summaries, and closing sentences are claims. They may compress the model. They may not add a driver, a risk, a recommendation, a human decision, or a governance result that the model does not contain. If a rewrite needs a new factual claim, stop and return that claim to the decision model for validation before the document is treated as finished.
 
+## User-facing Chinese
+
+When the deliverable is Chinese, write as a native Chinese-speaking engineer explaining the problem. This covers the final reply and any README, report, blog, or rule document produced here.
+
+- Keep standard technical terms. Leave internal engineering slang out of the reader-facing text.
+- Avoid half-translated jargon. Replace “格式不会漂”, “把链路收口”, and “能力被吃掉” with “格式固定下来”, “范围收敛到这些文件”, and “增益不明显”.
+- If you would not say the sentence to a colleague, rewrite it in plainer Chinese.
+- A report may keep its structure. Leave out “阶段性”, “体系化”, “闭环”, “赋能”, and “沉淀” when they only make the prose sound substantial. When one of these words stands for a real action, name that action and the evidence.
+- State the conclusion in a short sentence, then give the evidence. Do not coin a term to sound professional.
+- Before sending, check for English word order copied into Chinese, words only the agent understands, and phrasing that ordinary Chinese can say more plainly.
+
+These rules change wording only. They stay inside the substance boundary above.
+
 ## writing-style integration
 
 If a `writing-style` skill is available, use it for tone, language habits, and removal of mechanical phrasing. The substance boundary still applies. Architecture semantics, evidence, scores, governance outcomes, the recommendation, and `human_decision` stay owned by this skill.
